@@ -1,1 +1,1 @@
-export const TEST_USER_ID = 833945391;
+export const TEST_USER_ID = '';

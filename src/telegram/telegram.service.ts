@@ -1,5 +1,5 @@
 import { Injectable, Logger } from '@nestjs/common';
-import { TEST_USER_ID } from './telegram.constants';
+import { TELEGRAM_CHAT_ID } from './telegram.constants';
 import { CaptureService } from './capture.service';
 import { ConfigService } from '@nestjs/config';
 // import * as TelegramBot from 'node-telegram-bot-api'; // works after installing types
@@ -34,15 +34,15 @@ export class TelegramService {
     // this.logger.debug(msg);
     if (msg.text === this.config.get<string>('COMMAND_1')) {
       try {
-        this.bot.sendMessage(TEST_USER_ID, 'Mohon Tunggu...');
+        this.bot.sendMessage(TELEGRAM_CHAT_ID, 'Mohon Tunggu...');
         const screenshot = await this.captureService.capture(
           this.config.get<string>('URL_1'),
         );
         const caption = this.config.get<string>('CAPTION_1');
-        await this.bot.sendPhoto(TEST_USER_ID, screenshot, { caption });
+        await this.bot.sendPhoto(TELEGRAM_CHAT_ID, screenshot, { caption });
       } catch (error) {
         this.bot.sendMessage(
-          TEST_USER_ID,
+          TELEGRAM_CHAT_ID,
           'Sabar boss, gunakan perintah berurutan',
         );
       }
@@ -50,15 +50,15 @@ export class TelegramService {
 
     if (msg.text === this.config.get<string>('COMMAND_2')) {
       try {
-        this.bot.sendMessage(TEST_USER_ID, 'Mohon Tunggu...');
+        this.bot.sendMessage(TELEGRAM_CHAT_ID, 'Mohon Tunggu...');
         const screenshot = await this.captureService.capture(
           this.config.get<string>('URL_2'),
         );
         const caption = this.config.get<string>('CAPTION_2');
-        await this.bot.sendPhoto(TEST_USER_ID, screenshot, { caption });
+        await this.bot.sendPhoto(TELEGRAM_CHAT_ID, screenshot, { caption });
       } catch (error) {
         this.bot.sendMessage(
-          TEST_USER_ID,
+          TELEGRAM_CHAT_ID,
           'Sabar boss, gunakan perintah berurutan',
         );
       }
@@ -66,15 +66,15 @@ export class TelegramService {
 
     if (msg.text === this.config.get<string>('COMMAND_3')) {
       try {
-        this.bot.sendMessage(TEST_USER_ID, 'Mohon Tunggu...');
+        this.bot.sendMessage(TELEGRAM_CHAT_ID, 'Mohon Tunggu...');
         const screenshot = await this.captureService.capture(
           this.config.get<string>('URL_3'),
         );
         const caption = this.config.get<string>('CAPTION_3');
-        await this.bot.sendPhoto(TEST_USER_ID, screenshot, { caption });
+        await this.bot.sendPhoto(TELEGRAM_CHAT_ID, screenshot, { caption });
       } catch (error) {
         this.bot.sendMessage(
-          TEST_USER_ID,
+          TELEGRAM_CHAT_ID,
           'Sabar boss, gunakan perintah berurutan',
         );
       }
@@ -82,15 +82,15 @@ export class TelegramService {
 
     if (msg.text === this.config.get<string>('COMMAND_4')) {
       try {
-        this.bot.sendMessage(TEST_USER_ID, 'Mohon Tunggu...');
+        this.bot.sendMessage(TELEGRAM_CHAT_ID, 'Mohon Tunggu...');
         const screenshot = await this.captureService.capture(
           this.config.get<string>('URL_4'),
         );
         const caption = this.config.get<string>('CAPTION_4');
-        await this.bot.sendPhoto(TEST_USER_ID, screenshot, { caption });
+        await this.bot.sendPhoto(TELEGRAM_CHAT_ID, screenshot, { caption });
       } catch (error) {
         this.bot.sendMessage(
-          TEST_USER_ID,
+          TELEGRAM_CHAT_ID,
           'Sabar boss, gunakan perintah berurutan',
         );
       }
@@ -98,15 +98,15 @@ export class TelegramService {
 
     if (msg.text === this.config.get<string>('COMMAND_5')) {
       try {
-        this.bot.sendMessage(TEST_USER_ID, 'Mohon Tunggu...');
+        this.bot.sendMessage(TELEGRAM_CHAT_ID, 'Mohon Tunggu...');
         const screenshot = await this.captureService.capture(
           this.config.get<string>('URL_5'),
         );
         const caption = this.config.get<string>('CAPTION_5');
-        await this.bot.sendPhoto(TEST_USER_ID, screenshot, { caption });
+        await this.bot.sendPhoto(TELEGRAM_CHAT_ID, screenshot, { caption });
       } catch (error) {
         this.bot.sendMessage(
-          TEST_USER_ID,
+          TELEGRAM_CHAT_ID,
           'Sabar boss, gunakan perintah berurutan',
         );
       }
